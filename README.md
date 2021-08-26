@@ -1,7 +1,7 @@
 # Project created with Django for well distrubution of grown rice across the country so that every farmer can get a fair price for their paddy.
 # Idea selected in first round of ICT Innovation Fund 2019, ICT Division, Bangladesh
 
-								Fosholi-Python
+						Fosholi-Python
 
 
 Software Requirement
