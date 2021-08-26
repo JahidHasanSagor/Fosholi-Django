@@ -1,0 +1,25 @@
+{% extends 'base-dc.html' %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <p class="mt-5"></p>
+    <h2 clas="mt-5">Register a new UNO </h2>
+
+    <form method="POST">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-success">
+                {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% comment %} generating form from views {% endcomment %}
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="btn btn-success btn-block btn-lg mx-auto" type="submit" value="Submit">
+
+
+    </form>
+</div>
+
+{% endblock %}
