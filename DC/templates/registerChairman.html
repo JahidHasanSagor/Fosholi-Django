@@ -1,0 +1,31 @@
+{% extends 'base-dc.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+ <section class="faremer-reigstration">
+        <div class="container dash-block clearfix">
+            <h2 class="text-center py-5">Register new Up Chaiman</h2>
+
+    <form method="POST">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-success">
+                {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% comment %} generating form from views {% endcomment %}
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input class="btn btn-success btn-block btn-lg mx-auto" type="submit" value="Submit">
+
+    </form>
+        </div>
+    </section>
+
+{% endblock %}
+
+
+
+      
+
